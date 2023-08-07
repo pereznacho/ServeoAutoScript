@@ -6,7 +6,7 @@ BWhite='\033[1;37m'
 NC='\033[0m'
 
 if command -v autossh > /dev/null 2>&1; then
-    echo -e "${BLUE}Program exists, keep moving..." 
+    echo -e "${BLUE}AutoSSH Binary found, keep moving..." 
     echo -e "${GREEN}Please, choose your Serveo subdomain: "
     read subdom
 
@@ -15,5 +15,7 @@ if command -v autossh > /dev/null 2>&1; then
 else
     echo -e "${GREEN}Program does not exist. We will install it!"
     sudo apt install -y autossh > /dev/null 2>&1 
-    echo -e "${BLUE}Please re-run the script again, config your API key and you will be ready to setup your own Serveo Subdomain."
+    echo -e "${BLUE}AutoSSH has been installed successfully. Running the script again, please wait a few seconds..."
+    bash ./serveo.sh
 fi
+
